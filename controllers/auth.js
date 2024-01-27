@@ -115,44 +115,4 @@ exports.postSignup = (req, res, next) => {
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
   });
-
-  recaptcha.verify(req, (error, data) => {
-    if (error) {
-      validationErrors.push({ msg: "reCAPTCHA verification failed" });
-      req.flash("errors", validationErrors);
-      return res.redirect("/signup");
-    }
-    const user = new User({
-      userName: req.body.userName,
-      email: req.body.email,
-      password: req.body.password,
-      goal: req.body.goal,
-    });
-
-    User.findOne(
-      { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
-      (err, existingUser) => {
-        if (err) {
-          return next(err);
-        }
-        if (existingUser) {
-          req.flash("errors", {
-            msg: "Account with that email address or username already exists.",
-          });
-          return res.redirect("../signup");
-        }
-        user.save((err) => {
-          if (err) {
-            return next(err);
-          }
-          req.logIn(user, (err) => {
-            if (err) {
-              return next(err);
-            }
-            res.redirect("/tracker");
-          });
-        });
-      },
-    );
-  });
 };
