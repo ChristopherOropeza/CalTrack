@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div class="flex justify-center items-center min-h-screen p-2">
@@ -166,6 +167,12 @@
             placeholder="Confirm password"
             class="input input-bordered w-full mb-4 text-black-200"
           />
+          
+          <div class="text-center">
+            <div class="w-[298px] h-[72px] overflow-hidden mt-0 mb-4 mx-auto">
+              <div class="g-recaptcha relative left-[-2px] top-[-1px]" data-theme="light" data-sitekey="<%= process.env.RECAPTCHA_SITE_KEY %>"></div>
+            </div>
+          </div>
           
           <input value="SIGNUP" type="submit" class="btn btn-success" />
         </form>
