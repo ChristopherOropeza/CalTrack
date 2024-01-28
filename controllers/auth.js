@@ -2,11 +2,6 @@ const passport = require("passport");
 require("dotenv").config({ path: "../config/.env" });
 const validator = require("validator");
 const User = require("../models/User");
-const Recaptcha = require("express-recaptcha").RecaptchaV2;
-const recaptcha = new Recaptcha(
-  process.env.RECAPTCHA_SITE_KEY,
-  process.env.RECAPTCHA_SECRET_KEY,
-);
 
 exports.getLogin = (req, res) => {
   if (req.user) {
