@@ -5,7 +5,7 @@ CalTrack, an app designed to help you track the calories you burn and the calori
 
 **Tech used:** EJS, Tailwind, MongoDB/Mongoose, Node, Express, JavaScript, HTML, CSS
 
-**Packages/Dependencies used:** bcrypt, connect-mongo, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, passport, validator
+**Packages/Dependencies used:** bcrypt, connect-mongo, ejs, express, express-flash, express-recaptcha, express-session, mongodb, mongoose, morgan, passport, validator
 
 ## Optimizations
 
