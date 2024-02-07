@@ -1,6 +1,8 @@
 # CalTrack
 CalTrack, an app designed to help you track the calories you burn and the calories you consume and set goals. A tool for your health and fitness goals.
 
+![](https://github.com/christopheroropeza/caltrack/blob/main/caltrack.gif)
+
 **Link to project:** [CalTrack](https://cal-track.onrender.com/)
 
 ## How It's Made
@@ -14,4 +16,3 @@ CalTrack, an app designed to help you track the calories you burn and the calori
 - Saved history
 - Activity vs. food categories
 - Macronutrient content of food
-- Accessibility
