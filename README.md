@@ -16,3 +16,7 @@ CalTrack, an app designed to help you track the calories you burn and the calori
 - Saved history
 - Activity vs. food categories
 - Macronutrient content of food
+
+## Lessons Learned
+
+One of the first times deploying an app on Render.
